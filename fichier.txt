@@ -1,0 +1,71 @@
+DB::table('users')->insert([
+    'nom'=>'TOYI',
+    'prenom'=>'Francois',
+    'email'=>'francoistoyi4@gmail.com',
+    'contact'=>'93516499',
+    'statut'=>'admin',
+    'password'=>'pwd'
+]);
+
+
+DB::table('users')->insert([
+    'nom'=>'TOYI',
+    'prenom'=>'Fabrice',
+    'email'=>'fabricetoyi8@gmail.com',
+    'contact'=>'97607031',
+    'statut'=>'user',
+    'password'=>'userpwd'
+]);
+
+
+DB::table('entreprises')->insert(
+    [
+            "nom"=>" ifnti",
+            "pays"=> "togo",
+            "ville"=>"sokode",
+            "quartier"=>"Komah",
+            "adresse"=>"komah plage",
+            "user_id"=>1,
+        ]
+);
+
+DB::table('entreprises')->insert(
+    [
+            "nom"=>"togocel",
+            "pays"=> "maroc",
+            "ville"=>"marakech",
+            "quartier"=>"Komah",
+            "adresse"=>"komah plage",
+            "user_id"=>2,
+        ]
+);
+
+DB::table('entreprises')->insert(
+    [
+            "nom"=>"societe generale",
+            "pays"=> "togo",
+            "ville"=>"kara",
+            "quartier"=>"Komah",
+            "adresse"=>"komah plage",
+            "user_id"=>1,
+        ]
+);
+
+
+DB::table("entreprises")->insert(
+    [
+        "nom"=>"societe generale",
+        "pays"=> "togo",
+        "ville"=>"sokode",
+        "quartier"=>"Komah",
+        "adresse"=>"komah plage",
+        "user_id"=>2,
+    ]
+);
+
+
+
+DB::table('users')->where('id',1)->update(['password'=>'pword']);
+
+
+DB::table('users')->get();
